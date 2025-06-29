@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 30px;
+    text-align: center;
+}
+
+#form-area {
+    margin-bottom: 20px;
+}
+
+#comments-area {
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+}
+
+#send-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#comments-area {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border: 2px dashed #ccc;
+  overflow: hidden;
+  margin-top: 20px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.comment {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 18px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border-radius: 20px;
+    top: calc(10% + 80% * var(--rand));
+    right: -200px; /* Start off-screen */
+    animation: moveleft 5s linear forwards;
+}
+
+@keyframes moveleft {
+    0% {
+      right: -200px;
+    }
+    100% {
+      right: 100%;
+    }
+}
